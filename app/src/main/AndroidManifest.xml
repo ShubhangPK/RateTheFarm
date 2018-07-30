@@ -11,13 +11,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginAndSignUp">
+
+        <activity
+            android:name=".LoginAndSignUp"
+            android:theme="@style/OpeningScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".GetFarmerDetails"
+            android:label="@string/page_2_heading"/>
+
+        <activity
+            android:name=".FarmersList"
+            android:label="@string/page_3_heading" />
+
+        <activity android:name=".ShowFarmerDetails"
+            android:label="@string/page_4_heading"/>
+
     </application>
 
 </manifest>

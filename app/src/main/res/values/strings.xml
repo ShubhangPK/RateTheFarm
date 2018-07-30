@@ -1,8 +1,17 @@
 <resources>
     <string name="app_name">Rate The Farm</string>
-    <string name="email_hint">Email</string>
-    <string name="login_btn_hint">LOGIN</string>
-    <string name="heading">🅡🅐🅣🅔 🅣🅗🅔 🅕🅐🅡🅜</string>
-    <string name="password_hint">Password</string>
-    <string name="register">Register</string>
+    <string name="page_1_email_hint">Email</string>
+    <string name="page_1_login_btn_hint">LOGIN</string>
+    <string name="page_1_app_title">🅡🅐🅣🅔 🅣🅗🅔 🅕🅐🅡🅜</string>
+    <string name="page_1_password_hint">Password</string>
+    <string name="page_1_register">Register</string>
+
+
+    <string name="page_2_heading">Enter Details</string>
+
+
+    <string name="page_3_heading">All Farmers</string>
+
+
+    <string name="page_4_heading">Profile</string>
 </resources>
