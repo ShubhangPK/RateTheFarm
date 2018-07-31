@@ -50,7 +50,7 @@ public class LoginAndSignUp extends AppCompatActivity {
         mPage4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(v.getContext(), ShowFarmerDetails.class);
+                Intent myIntent = new Intent(v.getContext(), Register.class);
                 startActivity(myIntent);
             }
         });
