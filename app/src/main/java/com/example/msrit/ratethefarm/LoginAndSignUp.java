@@ -11,8 +11,7 @@ public class LoginAndSignUp extends AppCompatActivity {
     // Remove when project is done
     private Button mPage1, mPage2, mPage3, mPage4;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    @Override    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_and_sign_up);
 
