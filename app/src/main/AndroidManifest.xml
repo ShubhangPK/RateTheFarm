@@ -29,6 +29,7 @@
         <activity
             android:name=".ShowFarmerDetails"
             android:label="@string/page_4_heading" />
+        <activity android:name=".TestPushData"></activity>
     </application>
 
 </manifest>

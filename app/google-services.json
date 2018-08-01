@@ -23,6 +23,22 @@
           }
         },
         {
+          "client_id": "929384580361-hkqpj6ndui27set6hqp7gko1sts0jiej.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.msrit.ratethefarm",
+            "certificate_hash": "5989d1d7d9848b5c5bdc1b33ef629aa662e1f415"
+          }
+        },
+        {
+          "client_id": "929384580361-a8lv5vbosohbknomhbv91a5t757rp95g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.msrit.ratethefarm",
+            "certificate_hash": "933d2db206385515409ee66e4c93934b4d6b62b2"
+          }
+        },
+        {
           "client_id": "929384580361-t8l6lrkhc401v9qmi0ftuf8nsd0nolpv.apps.googleusercontent.com",
           "client_type": 3
         }

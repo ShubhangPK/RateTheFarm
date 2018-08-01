@@ -9,7 +9,7 @@ import android.widget.Button;
 public class LoginAndSignUp extends AppCompatActivity {
 
     // Remove when project is done
-    private Button mPage1, mPage2, mPage3, mPage4;
+    private Button mPage1, mPage2, mPage3, mPage4, mPage5;
 
     @Override    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +19,7 @@ public class LoginAndSignUp extends AppCompatActivity {
         mPage2 = findViewById(R.id.page_2);
         mPage3 = findViewById(R.id.page_3);
         mPage4 = findViewById(R.id.page_4);
+        mPage5 = findViewById(R.id.page_5);
 
         mPage1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +51,14 @@ public class LoginAndSignUp extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(v.getContext(), ShowFarmerDetails.class);
+                startActivity(myIntent);
+            }
+        });
+
+        mPage5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(v.getContext(), TestPushData.class);
                 startActivity(myIntent);
             }
         });
