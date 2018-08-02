@@ -30,21 +30,35 @@ public class FarmersList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_farmers_list);
 
-        mDatabase = FirebaseDatabase.getInstance().getReference().child("Users");
-
+        mDatabase = FirebaseDatabase.getInstance().getReference();
         mRecyclerView = findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 
+        mListItems = new ArrayList<>();
 
-         mDatabase.addValueEventListener(new ValueEventListener() {
+        mDatabase.child("Users").addChildEventListener(new ChildEventListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
 
-                mListItems = new ArrayList<>();
-                UserData CurrentUser= dataSnapshot.getValue(UserData.class);
-                mListItems.add(CurrentUser);
+                UserData value = dataSnapshot.getValue(UserData.class);
+                mListItems.add(value);
+                mAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
 
             }
 
@@ -54,23 +68,9 @@ public class FarmersList extends AppCompatActivity {
             }
         });
 
-
         mAdapter = new MyAdapter(mListItems,this);
         mRecyclerView.setAdapter(mAdapter);
-
-
-
     }
 }
 
-
-/*
-Data attributes to be included:
-user id : int
-Farmer's name
-age
-gender
-Father's/husband's name
-
- */
-
+//TODO add rating algorithm, add pushing backend, add pulling backend.

@@ -1,5 +1,6 @@
 package com.example.msrit.ratethefarm;
 
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,7 +16,7 @@ import com.google.firebase.database.ValueEventListener;
 public class TestPushData extends AppCompatActivity {
 
     DatabaseReference mDatabase;
-    int userID = 1;
+    int UserID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,7 @@ public class TestPushData extends AppCompatActivity {
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
         final EditText bName = findViewById(R.id.test_name);
+        final EditText bAge = findViewById(R.id.test_age);
         final EditText bVillage = findViewById(R.id.test_village);
         final EditText bCrop = findViewById(R.id.test_crop);
         final EditText bLand = findViewById(R.id.test_land);
@@ -32,22 +34,36 @@ public class TestPushData extends AppCompatActivity {
 
         Button mPush = findViewById(R.id.push_data);
 
+        mDatabase.child("Current Users").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                UserID = dataSnapshot.getValue(Integer.class);
+                UserID++;
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
         mPush.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
 
                 UserData user = new UserData();
-                user.Name = bName.getText().toString();
-                user.Village = bVillage.getText().toString();
-                user.Crop = bCrop.getText().toString();
-                user.Land = bLand.getText().toString();
-                user.Animals = bAnimals.getText().toString();
-                user.Rating = bRating.getText().toString();
+                user.setName(bName.getText().toString());
+                user.setAge(bAge.getText().toString());
+                user.setVillage(bVillage.getText().toString());
+                user.setCrop(bCrop.getText().toString());
+                user.setLand(bLand.getText().toString());
+                user.setAnimals(bAnimals.getText().toString());
+                user.setRating(bRating.getText().toString());
+                user.setUserID(UserID);
 
-                mDatabase.child("Users").child("key_" + Integer.toString(userID++)).setValue(user);
-
-
+                mDatabase.child("Users").child(Integer.toString(UserID)).setValue(user);
+                mDatabase.child("Current Users").setValue(UserID);
 
             }
         });
