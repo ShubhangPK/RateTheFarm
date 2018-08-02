@@ -5,5 +5,172 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ShowFarmerDetails">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        style="@style/CardView.Dark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Name:"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Enter your Name here."/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Village:"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Enter to which Village you belong , here."/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Hobli:"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Enter to which Hobli you belong here."/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Taluq:"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Enter which Taluq you belong  here."/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Age:"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Enter your age here."/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Number of working hours for:"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Enter your working time details here."/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="Male or Female:"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Enter your Sex here."/>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Aadhar card Number"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Enter your Aadhar card details here."/>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="Land Details:"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Enter your land details here."/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Total irrigated Land:"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Area of the irrigated land in acres."/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Total Rainfed Land:"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Area of the Rainfed land in acres."
+            android:paddingBottom="10dp"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="2">
+            <TableRow>
+                <TextView
+                    android:text="Animals"
+                    android:gravity="center"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="Cows"
+                    android:gravity="center"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="Buffalo"
+                    android:gravity="center"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="Cock"
+                    android:gravity="center"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="Hen"
+                    android:gravity="center"
+                    android:padding="3dip" />
+            </TableRow>
+
+            <TableRow
+                android:padding="10dp">
+                <TextView
+                    android:text="Number of Each"
+                    android:gravity="center"
+                    android:paddingBottom="50dp"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="3dip"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="3dip"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="3dip"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="3dip"/>
+
+
+            </TableRow>
+        </TableLayout>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>
